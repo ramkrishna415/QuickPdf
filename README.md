@@ -91,6 +91,6 @@ Lucide Icons
 
 ## Author
 
-Created by Ramkrishna upadhyay
+Created by **Ramkrishna upadhyay**
 
 B.Tech Student
