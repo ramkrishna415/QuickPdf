@@ -1,0 +1,82 @@
+/* Poore page ka reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body, #root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Page hilega nahi, sirf content scroll hoga */
+}
+
+/* Sidebar aur Main Content ko side-by-side rakhne ke liye */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar ki width fix rakhein taaki wo dabbe nahi */
+.sidebar {
+ width: 260px;
+  min-width: 260px;
+  background-color: #1a1b2f;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Right side wala poora area */
+.main-content {
+  flex-grow: 1; /* Bacha hua saara space ye lega */
+  display: flex;
+  flex-direction: column; /* Navbar upar, content niche */
+ height: 100vh;
+  overflow-y: auto; /* Sirf content area scroll hoga */
+  background-color: #f9fafb;
+  
+}
+
+/* Content ke beech ka gap */
+.content-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+   padding-top: 30px;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    transform: translateX(0) !important; /* Hamesha dikhega */
+    position: relative;
+  }
+  
+  .sidebar .lg-hide-btn { 
+    display: none !important; /* Desktop pe "X" button khatam */
+  }
+}
+
+/* Mobile par Sidebar ki settings */
+@media (max-width: 1023px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  /* Jab Sidebar band ho (Mobile size pe) */
+  .sidebar-closed {
+    transform: translateX(-100%);
+  }
+
+  .sidebar .lg-hide-btn {
+    display: block; /* Mobile par "X" dikhega taaki band kar sakein */
+  }
+}

@@ -1,0 +1,7 @@
+# Node dependencies
+backend/node_modules/
+QuickPdf/node_modules/
+
+
+# Backend environment file
+backend/.env
