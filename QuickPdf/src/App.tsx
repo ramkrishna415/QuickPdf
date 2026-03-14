@@ -27,12 +27,12 @@ function App() {
         />
 
         <div className="content-body">
-          {/* ✨ Yahan setup karein Routes */}
+         
           <Routes>
-            {/* Home Page: Jahan upload box aur features hain */}
+           
             <Route path="/" element={<MainContent currentTool={currentTool} />}  />
             
-            {/* Details Page: Jahan 'Read More' click karne pe jayenge */}
+            
             <Route path="/feature/:id" element={<FeatureDetails />} />
           </Routes>
         </div>

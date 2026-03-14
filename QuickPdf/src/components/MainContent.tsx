@@ -78,7 +78,7 @@ const isValidFile = (file: File, allowedTypes: string) => {
 
     try {
       // Backend API Call
-      const response = await fetch(`http://localhost:3000/api/${config.endpoint}`, {
+      const response = await fetch(`https://quickpdf-1.onrender.com/api/${config.endpoint}`, {
         method: 'POST',
         body: formData,
       });
